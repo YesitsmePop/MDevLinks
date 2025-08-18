@@ -11,8 +11,7 @@ const projects = [
     id: 2,
     title: "Novacore",
     description: "3D space exploration game developed with JME3",
-    image: "/images/nova.png",
-    link: "https://your-3d-showcase.com"
+    image: "/images/nova.png"
   },
   {
     id: 3,

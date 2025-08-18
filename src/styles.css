@@ -413,3 +413,111 @@ textarea { min-height:140px; }
     width: 5%;
     height: 5%;
 }
+
+.aboutimg {
+  width: 60% !important;
+  margin-left: 13rem;
+  border-radius: 0.5rem;
+}
+
+/* ==================== */
+/* 🌐 Mobile Optimizations */
+/* ==================== */
+
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* HERO */
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 20px;
+  }
+
+  .aboutimg {
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* PROJECT CARDS */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .tilt-card {
+    height: auto;              /* allow card to grow with text */
+    max-width: 100%;           /* use full width on mobile */
+  }
+
+  .card-image {
+    aspect-ratio: 16/9;        /* keep images consistent */
+    height: auto;              /* remove forced height */
+  }
+
+  .card-content {
+    padding: 1rem;             /* slightly tighter padding on small screens */
+  }
+
+  /* FORM */
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .socials {
+    margin-top: 8px;
+  }
+
+  .aboutimg {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .main-wrap {
+    padding: 20px 14px;
+  }
+
+  .tilt-card {
+    max-width: 300px;
+  }
+}

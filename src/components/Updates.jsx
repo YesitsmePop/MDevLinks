@@ -17,7 +17,7 @@ export default function Updates(){
 
       <div className="about">
         <h3>Thoughts</h3>
-        <p>Projects are easier when you only polish one thing. Making something complete is just exhausting. In other news, it's 2:13 am and I'm still coding.</p>
+        <p>I really need to get some sleep. There's no shot I'll be awake in Physics tomorrow. In other news, it's 2:13 am and I'm still coding.</p>
       </div>
     </section>
   )

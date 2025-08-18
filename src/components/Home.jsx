@@ -5,11 +5,11 @@ export default function Home({ setPage }) {
     <section className="home-hero fade-in">
       <h1 className="hero-title">Design and code — with healthy obsession.</h1>
       <p className="hero-sub">
-        I build small, polished features that contribute to a larger vision. I am profficient in React, JS, CSS, and Java.
+        I build small, polished features that contribute to a larger vision. I am profficient in React, Javascript, CSS, and Java.
       </p>
 
       <div className="about fade-in" style={{marginTop:40}}>
-        <img src="/images/aboutImg.JPG" className="card-image img"></img>
+        <img src="/images/aboutImg.JPG" className="aboutimg"></img>
         <h3>About me</h3>
         <p>
           I'm a solo microbrand developer operating under the alias <strong>MDevLinks</strong>. I ship small, polished features
