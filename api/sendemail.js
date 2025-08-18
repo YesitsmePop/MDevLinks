@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, message } = req.body;
+  const { name, email, budget, message } = req.body;
 
   // Debug: check if env vars are actually loaded
   console.log("SMTP_USER length:", process.env.SMTP_USER?.length);
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       from: `"Portfolio Contact" <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_USER, // send to yourself
       subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nBudget: ${budget}\n${message}`,
     });
 
     return res.status(200).json({ success: true });

@@ -18,7 +18,7 @@ const projects = [
     title: "Dot Shot",
     description: "Fast-paced canvas-based javascript gamecrypt",
     image: "/images/dot.png",
-    link: "https://popcornmdm.github.pages.com"
+    link: "https://yesitsmepop.github.io/Dot-Shot/"
   }
 ];
 
