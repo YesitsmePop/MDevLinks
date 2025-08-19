@@ -7,6 +7,7 @@ import Hire from './components/Hire'
 import Updates from './components/Updates'
 import Footer from './components/Footer'
 import Scene from './components/Scene'
+import Art from './components/Art'
 
 export default function App() {
   const [page, setPage] = useState('home') // 'home' | 'projects' | 'hire' | 'updates'
@@ -22,6 +23,7 @@ export default function App() {
         {page === 'projects' && <Projects />}
         {page === 'hire' && <Hire />}
         {page === 'updates' && <Updates />}
+        {page === 'art' && <Art />}
       </main>
       <Footer />
     </div>

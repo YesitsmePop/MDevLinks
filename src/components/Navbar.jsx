@@ -19,6 +19,7 @@ export default function Navbar({ page, setPage }) {
         <NavLink label="Projects" id="projects" active={page==='projects'} onClick={setPage} />
         <NavLink label="Hire" id="hire" active={page==='hire'} onClick={setPage} />
         <NavLink label="Updates" id="updates" active={page==='updates'} onClick={setPage} />
+        <NavLink label="Art" id="art" active={page==='art'} onClick={setPage} />
       </nav>
     </header>
   )

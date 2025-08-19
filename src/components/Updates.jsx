@@ -3,7 +3,7 @@ import React from 'react'
 export default function Updates(){
   return (
     <section>
-      <div className="section-title">Updates & Notes</div>
+      <div className="section-title">Updates & Notes (8/18/25)</div>
 
       <div className="about" style={{marginBottom:18}}>
         <h3>Current status</h3>
@@ -17,7 +17,7 @@ export default function Updates(){
 
       <div className="about">
         <h3>Thoughts</h3>
-        <p>I really need to get some sleep. There's no shot I'll be awake in Physics tomorrow. In other news, it's 2:13 am and I'm still coding.</p>
+        <p>I really need to get some sleep. I still don't understand Physics. Someone please help.</p>
       </div>
     </section>
   )
