@@ -2,7 +2,7 @@
   --bg:#050505;
   --panel:#0b0b0b;
   --muted:#7a7a7a;
-  --neon:#00ff6a; /* neon green accent */
+  --neon:#00ff6a;
   --white:#ffffff;
   --thin:100;
   --glass: rgba(255,255,255,0.04);
@@ -86,7 +86,7 @@ body{
   font-size:15px;
 }
 
-/* elegant line under link */
+/* line under link */
 .navlink::after{
   content:"";
   position:absolute;
@@ -110,7 +110,7 @@ body{
   opacity:1;
 }
 
-/* active page indicator (faint) */
+/* active page indicator */
 .navlink.active{
   color:var(--white);
 }
@@ -356,20 +356,19 @@ textarea { min-height:140px; }
   to { opacity:1; transform:none; }
 }
 
-/* ---------------------------------------------------- */
 /* === Global background canvas container === */
 .scene-bg{
   position: fixed;
   inset: 0;
-  z-index: 0;                 /* behind everything */
-  pointer-events: none;       /* never intercept clicks */
-  opacity: 0.5;               /* subtle background */
+  z-index: 0;             
+  pointer-events: none;      
+  opacity: 0.5;            
 }
 
 /* Put content above the background */
 .navbar, .main-wrap, .footer { position: relative; z-index: 1; }
 
-/* === Projects: switch from R3F per-card to CSS tilt === */
+/*Projects: switch from R3F per-card to CSS tilt */
 .tilt-card{
   position: relative;
   height: 320px;
@@ -383,7 +382,6 @@ textarea { min-height:140px; }
   transition: transform 280ms cubic-bezier(.2,.9,.3,1), box-shadow 280ms;
 }
 
-/* wrapper surface that we rotate */
 .tilt-css .tilt-surface{
   position: absolute;
   inset: 0;
@@ -393,12 +391,10 @@ textarea { min-height:140px; }
   transition: transform 160ms cubic-bezier(.2,.9,.3,1);
 }
 
-/* add a faint sheen on hover for depth */
 .tilt-css:hover{
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
-/* overlay/content styles already exist; ensure stacking */
 .card-overlay{ position:absolute; inset:0; display:flex; align-items:flex-end; padding:18px; }
 .card-content{
   width:100%;
@@ -471,7 +467,6 @@ textarea { min-height:140px; }
   color: #00ff6a;
 }
 
-/* modal for art */
 /* Fullscreen modal */
 .art-modal {
   position: fixed;
@@ -506,11 +501,7 @@ textarea { min-height:140px; }
   border-radius: 0.5rem;
 }
 
-
-
-/* ==================== */
-/* 🌐 Mobile Optimizations */
-/* ==================== */
+/* eyyy mobile */
 
 @media (max-width: 768px) {
   /* NAVBAR */
@@ -556,17 +547,17 @@ textarea { min-height:140px; }
   }
 
   .tilt-card {
-    height: auto;              /* allow card to grow with text */
-    max-width: 100%;           /* use full width on mobile */
+    height: auto;          
+    max-width: 100%;         
   }
 
   .card-image {
-    aspect-ratio: 16/9;        /* keep images consistent */
-    height: auto;              /* remove forced height */
+    aspect-ratio: 16/9;     
+    height: auto;           
   }
 
   .card-content {
-    padding: 1rem;             /* slightly tighter padding on small screens */
+    padding: 1rem;            
   }
 
   /* FORM */
@@ -591,8 +582,9 @@ textarea { min-height:140px; }
   }
 }
 
+/* you never know */
 @media (max-width: 480px) {
-  /* Extra small devices */
+
   .hero-title {
     font-size: 22px;
   }

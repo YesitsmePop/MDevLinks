@@ -3,16 +3,16 @@ import React from 'react'
 export default function Updates(){
   return (
     <section>
-      <div className="section-title">Updates & Notes (8/18/25)</div>
+      <div className="section-title">Updates & Notes (8/19/25)</div>
 
       <div className="about" style={{marginBottom:18}}>
         <h3>Current status</h3>
-        <p>Putting way too much time into portfolio for AP Lang, AP Physics doesn't make sense, and still unemployed. Visit Hire to fix this.</p>
+        <p>Still unemployed. Still don't have a car. Still drinking 3 cups of coffee every morning.</p>
       </div>
 
       <div className="about" style={{marginBottom:18}}>
         <h3>On hobbies</h3>
-        <p>Golf: Driver isn't driving. Art: Testing cross hatching. Results are dissapointing.</p>
+        <p>Golf: WHY haven't I broke par at Jack Tone yet? Art: Ribs aren't easy to draw.</p>
       </div>
 
       <div className="about">

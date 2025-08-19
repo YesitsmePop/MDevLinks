@@ -1,8 +1,7 @@
-// src/components/Scene.jsx
+
 import React, { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 
-// Center Icosahedron
 function WireIcosahedron() {
   const ref = useRef()
   useFrame((_, dt) => {
@@ -18,7 +17,7 @@ function WireIcosahedron() {
   )
 }
 
-// Floating bipyramid (octahedron shape)
+// Floating bipyramids
 function FloatingBipyramid({ x, startY, speed }) {
   const ref = useRef()
   const { z, rotX, rotY } = useMemo(() => ({
@@ -29,10 +28,10 @@ function FloatingBipyramid({ x, startY, speed }) {
 
   useFrame((_, dt) => {
     if (!ref.current) return
-    // rotation
+ 
     ref.current.rotation.x += dt * 0.3
     ref.current.rotation.y += dt * 0.25
-    // float upward
+
     ref.current.position.y += dt * speed
     if (ref.current.position.y > 6) {
       ref.current.position.y = -6
@@ -48,16 +47,15 @@ function FloatingBipyramid({ x, startY, speed }) {
 }
 
 export default function Scene() {
-  // 3 fixed lanes per side
+
   const bipyramids = useMemo(() => {
     const arr = []
-    const leftXs = [-9, -6, -3.3]   // spread left
-    const rightXs = [3.3, 6, 9]     // spread right
-
+    const leftXs = [-9, -6, -3.3]   
+    const rightXs = [3.3, 6, 9]    
     leftXs.forEach((x, i) => {
       arr.push({
         x,
-        startY: -6 + i * 4, // stagger vertical positions
+        startY: -6 + i * 4, 
         speed: 0.5,
       })
     })
@@ -82,10 +80,8 @@ export default function Scene() {
       >
         <ambientLight intensity={0.1} />
 
-        {/* Centerpiece */}
         <WireIcosahedron />
 
-        {/* 6 spaced, non-colliding bipyramids */}
         {bipyramids.map((p, i) => (
           <FloatingBipyramid key={i} {...p} />
         ))}

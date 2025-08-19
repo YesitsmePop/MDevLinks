@@ -21,7 +21,6 @@ const Art = () => {
         ))}
       </div>
 
-      {/* Modal overlay */}
       {selectedImage && (
         <div className="art-modal">
           <button className="close-btn" onClick={() => setSelectedImage(null)}>

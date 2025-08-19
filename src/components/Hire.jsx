@@ -24,7 +24,7 @@ export default function Hire(){
 
       const json = await res.json().catch(() => ({}))
 
-      // ✅ match API return shape
+      // match API return shape
       if (res.ok && json?.success) {
         setStatus('success')
         setForm({ name:'', email:'', budget:'', message:'' })

@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
@@ -14,7 +14,6 @@ export default function App() {
 
   return (
     <div className="app-root">
-      {/* Global background canvas (one instance only) */}
       <Scene />
 
       <Navbar page={page} setPage={setPage} />

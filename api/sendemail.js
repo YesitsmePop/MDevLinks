@@ -1,4 +1,4 @@
-// pages/api/sendemail.js (or /api/sendemail.js if using Vercel functions)
+
 
 import nodemailer from "nodemailer";
 
@@ -9,7 +9,6 @@ export default async function handler(req, res) {
 
   const { name, email, budget, message } = req.body;
 
-  // Debug: check if env vars are actually loaded
   console.log("SMTP_USER length:", process.env.SMTP_USER?.length);
   console.log("SMTP_PASS length:", process.env.SMTP_PASS?.length);
 
@@ -23,7 +22,7 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
-      secure: true, // use SSL for Gmail (465)
+      secure: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -32,7 +31,7 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"Portfolio Contact" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER, // send to yourself
+      to: process.env.SMTP_USER,
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nBudget: ${budget}\n${message}`,
     });

@@ -1,4 +1,4 @@
-// src/data/projects.js
+
 const projects = [
   {
     id: 1,
